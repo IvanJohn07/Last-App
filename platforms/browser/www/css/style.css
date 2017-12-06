@@ -1,0 +1,201 @@
+body {
+  height:450px;}
+.container {
+  width:340px;
+  margin-top:30px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:0;
+  position:relative;
+  
+  -webkit-animation:heartBeat 1s ease infinite 0s;
+  -moz-animation:heartBeat 1s ease infinite 0s;
+  -o-animation:heartBeat 1s ease infinite 0s;
+  -ms-animation:heartBeat 1s ease infinite 0s;
+  animation:heartBeat 1s ease infinite 0s;
+}
+.container:hover {
+  -webkit-animation:heartBeat 0.8s ease infinite 0s;
+  -moz-animation:heartBeat 0.8s ease infinite 0s;
+  -o-animation:heartBeat 0.8s ease infinite 0s;
+  -ms-animation:heartBeat 0.8s ease infinite 0s;
+  animation:heartBeat 0.8s ease infinite 0s;
+}
+.heart {
+  position:absolute;
+  left:70px;
+  top:90px;
+  width:200px;
+  height:200px;
+  background-color:#bf0b0b;
+  -webkit-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+  -ms-transform:rotate(45deg);
+  transform:rotate(45deg);
+}
+.heart:before, .heart:after {
+  content:'';
+  display:block;
+  width:200px;
+  height:200px;
+  position:absolute;
+  border-radius:100px;
+  background-color:#bf0b0b;
+}
+.heart:before {
+  left:-100px;
+  top:0;
+}
+.heart:after {
+  right:0;
+  top:-100px
+}
+
+/*
+css keyframes based off:
+https://tympanus.net/codrops/2012/01/02/fullscreen-background-image-slideshow-with-css3/
+*/
+/*tested on chrome 24*/
+@-webkit-keyframes heartBeat { 
+    0% { zoom:100%; }
+    15% { zoom:120%; }
+    25% { zoom:110%; }
+    35% { zoom:120%; }
+    100% { zoom:100%; }
+}
+/*tested on opera 12*/
+@-o-keyframes heartBeat { 
+    0% { zoom:100%; }
+    15% { zoom:120%; }
+    25% { zoom:110%; }
+    35% { zoom:120%; }
+    100% { zoom:100%; }
+}
+/*
+tested on IE9, should work but doesn't :(
+https://developer.mozilla.org/en-US/docs/CSS/transform
+*/
+@-ms-keyframes heartBeat { 
+    0% { transform:scale(1); }
+    15% { transform:scale(1.2); }
+    25% { transform:scale(1.1); }
+    35% { transform:scale(1.2); }
+    100% { transform:scale(1); }
+}
+/*tested on FF 18*/
+@keyframes heartBeat { 
+    0% { transform:scale(1); }
+    15% { transform:scale(1.2); }
+    25% { transform:scale(1.1); }
+    35% { transform:scale(1.2); }
+    100% { transform:scale(1); }
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 40px solid white;
+  -webkit-transform: rotate(50deg);
+  transform: rotate(50deg);
+  position: absolute;
+  top: 85px;
+  left: -15px;
+}
+
+h2 {
+  font-family: 'ABeeZee', sans-serif;
+  font-color: #232323;
+  position: absolute;
+  top: 37px;
+  left: 40px;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600); 
+
+html {
+  border-top: 5px solid #fff;
+  background:#07f7f7;
+  color: #2a2a2a;
+}
+
+html, body {
+  background-image:url();
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans';
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+}
+
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+}
+
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  height: 300px;
+  background: #ccc;
+  text-align: center;
+  line-height: 300px;
+}
+
+a.control_prev, a.control_next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  background: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a.control_prev:hover, a.control_next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+}
+
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+.slider_option {
+  position: relative;
+  margin: 10px auto;
+  width: 160px;
+  font-size: 18px;
+}

@@ -1,0 +1,79 @@
+.parent_div {
+position: absolute;
+bottom: 15px;
+width: 100%;
+}
+.button{
+
+display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: yellow;
+  background-color: #a59ba5;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #d1cfd1;	
+}
+button:hover {background-color: #3e8e41}
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.bg10{/*
+  
+  background-image: url('img/img10.jpg');*/
+  background-color:violet;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.bg11{/*
+
+  background-image: url('img/img10.jpg');*/
+  background-color:skyblue;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.bg12{/*
+
+  background-image: url('img/img10.jpg');*/
+  background-color:yellow;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.bg13{/*
+
+  background-image: url('img/img10.jpg');*/
+  background-color:green;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.bg14{/*
+
+  background-image: url('img/img10.jpg');*/
+  background-color:pink;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+
+
+ 
